@@ -1,14 +1,11 @@
 <template>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<aside :class="`${is_expanded ? 'is-expanded' : ''}`">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+    <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
 		<div class="logo">
 			<img src="../../../public/assets/img/vuelogo.png" alt="Vue" />
-		</div>
-
-		<div class="menu-toggle-wrap">
-			<button class="menu-toggle" @click="ToggleMenu">
-				<span class="material-symbols-rounded">keyboard_double_arrow_right</span>
-			</button>
 		</div>
 
 		<h3>Menu</h3>
@@ -26,12 +23,14 @@
 				<span class="text">Team</span>
 			</router-link>
 			<router-link to="/contact" class="button">
-				<span class="material-symbols-rounded">email</span>
-				<span class="text">Contact</span>
+				<span class="material-symbols-outlined">admin_panel_settings</span>
+				<span class="text">Administration</span>
 			</router-link>
 		</div>
 
 		<div class="flex"></div>
+
+        <ProfilDD />
 
 		<div class="menu">
 			<router-link to="/settings" class="button">
@@ -39,10 +38,19 @@
 				<span class="text">Settings</span>
 			</router-link>
 		</div>
+
+        <div class="menu-toggle-wrap">
+			<button class="menu-toggle" @click="ToggleMenu">
+				<span class="material-symbols-rounded">keyboard_double_arrow_right</span>
+			</button>
+		</div>
+
 	</aside>
 </template>
 
+
 <script setup>
+import ProfilDD from './ProfilDD.vue'
 import {ref} from 'vue'
 
 
@@ -52,9 +60,14 @@ const ToggleMenu = () => {
 	localStorage.setItem("is_expanded", is_expanded.value)
 }
 
+
 </script>
 
+
+
 <style lang="scss" scoped>
+
+
 aside {
 	display: flex;
 	flex-direction: column;
@@ -83,14 +96,14 @@ aside {
 		transition: 0.2s ease-in-out;
 		.menu-toggle {
 			transition: 0.2s ease-in-out;
-			.material-symbols-rounded {
+			.material-symbols-rounded, .material-symbols-outlined {
 				font-size: 2rem;
 				color: var(--light);
 				transition: 0.2s ease-out;
 			}
 
 			&:hover {
-				.material-symbols-rounded {
+				.material-symbols-rounded, .material-symbols-outlined {
 					color: var(--primary);
 					transform: translateX(0.5rem);
 				}
@@ -115,7 +128,7 @@ aside {
 			text-decoration: none;
 			transition: 0.2s ease-in-out;
 			padding: 0.5rem 1rem;
-			.material-symbols-rounded {
+			.material-symbols-rounded, .material-symbols-outlined {
 				font-size: 2rem;
 				color: var(--light);
 				transition: 0.2s ease-in-out;
@@ -126,14 +139,14 @@ aside {
 			}
 			&:hover {
 				background-color: var(--dark-alt);
-				.material-symbols-rounded, .text {
+				.material-symbols-rounded, .material-symbols-outlined, .text {
 					color: var(--primary);
 				}
 			}
 			&.router-link-exact-active {
 				background-color: var(--dark-alt);
 				border-right: 5px solid var(--primary);
-				.material-symbols-rounded, .text {
+				.material-symbols-rounded,.material-symbols-outlined,  .text {
 					color: var(--primary);
 				}
 			}
@@ -150,7 +163,7 @@ aside {
 	&.is-expanded {
 		width: var(--sidebar-width);
 		.menu-toggle-wrap {
-			top: -3rem;
+			top: 0;
 
 			.menu-toggle {
 				transform: rotate(-180deg);
@@ -160,7 +173,7 @@ aside {
 			opacity: 1;
 		}
 		.button {
-			.material-symbols-rounded {
+			.material-symbols-rounded, .material-symbols-outlined {
 				margin-right: 1rem;
 			}
 		}
