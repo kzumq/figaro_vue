@@ -2,12 +2,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-
     <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
-		<div class="logo">
-			<img src="../../../public/assets/img/vuelogo.png" alt="Vue" />
-		</div>
-
 		<h3>Menu</h3>
 		<div class="menu">
 			<router-link to="/" class="button">
@@ -30,10 +25,9 @@
 
 		<div class="flex"></div>
 
-        <ProfilDD />
 
 		<div class="menu">
-			<router-link to="/settings" class="button">
+			<router-link to="/settings" class="button ">
 				<span class="material-symbols-rounded">settings</span>
 				<span class="text">Settings</span>
 			</router-link>
@@ -41,16 +35,20 @@
 
         <div class="menu-toggle-wrap">
 			<button class="menu-toggle" @click="ToggleMenu">
-				<span class="material-symbols-rounded">keyboard_double_arrow_right</span>
+				<span class="material-symbols-outlined menu-icon">menu</span>
+                <span class="material-symbols-outlined arrow-back">arrow_back</span>
 			</button>
 		</div>
+
+
 
 	</aside>
 </template>
 
 
 <script setup>
-import ProfilDD from './ProfilDD.vue'
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+
 import {ref} from 'vue'
 
 
@@ -68,6 +66,8 @@ const ToggleMenu = () => {
 <style lang="scss" scoped>
 
 
+
+
 aside {
 	display: flex;
 	flex-direction: column;
@@ -75,18 +75,14 @@ aside {
 	color: var(--light);
 	width: calc(2rem + 32px);
 	overflow: hidden;
-	min-height: 100vh;
+	min-height: calc(100vh - 5vh);
 	padding: 1rem;
 	transition: 0.2s ease-in-out;
+
 	.flex {
 		flex: 1 1 0%;
 	}
-	.logo {
-		margin-bottom: 1rem;
-		img {
-			width: 2rem;
-		}
-	}
+
 	.menu-toggle-wrap {
 		display: flex;
 		justify-content: flex-end;
@@ -94,6 +90,8 @@ aside {
 		position: relative;
 		top: 0;
 		transition: 0.2s ease-in-out;
+        .arrow-back { display: none; }
+        .settings-icon {display: none;}
 		.menu-toggle {
 			transition: 0.2s ease-in-out;
 			.material-symbols-rounded, .material-symbols-outlined {
@@ -105,7 +103,7 @@ aside {
 			&:hover {
 				.material-symbols-rounded, .material-symbols-outlined {
 					color: var(--primary);
-					transform: translateX(0.5rem);
+
 				}
 			}
 		}
@@ -165,9 +163,13 @@ aside {
 		.menu-toggle-wrap {
 			top: 0;
 
-			.menu-toggle {
-				transform: rotate(-180deg);
-			}
+        .menu-icon { display: none; }
+        .arrow-back { display: inline-block; }
+
+            .settings-icon{
+            	display: inline-block;
+            }
+
 		}
 		h3, .button .text {
 			opacity: 1;
@@ -186,6 +188,9 @@ aside {
 		z-index: 99;
 	}
 }
+
+
+
 
 </style>
 

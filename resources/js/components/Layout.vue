@@ -1,5 +1,10 @@
 <template>
+
+<Header />
+
     <div class="app">
+
+
         <Nav />
 
         <slot />
@@ -9,9 +14,10 @@
 <script>
 
 import Nav from "./Nav";
+import Header from "./header.vue";
 
 export default {
-    components: { Nav },
+    components: { Nav, Header },
 };
 
 </script>

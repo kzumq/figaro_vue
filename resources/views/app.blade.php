@@ -17,5 +17,6 @@
     @inertia
 </body>
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="../../node_modules/tw-elements/dist/js/index.min.js"></script>
 
 </html>

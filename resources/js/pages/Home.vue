@@ -3,8 +3,9 @@
 
     <Layout>
         <main>
-            <h1>Home</h1>
-            <p>This is the Homepage</p>
+            <h1 class="text-3xl font-bold underline">
+                Home
+            </h1>
         </main>
     </Layout>
 

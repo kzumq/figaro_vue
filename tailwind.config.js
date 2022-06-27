@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
     "./resources/views/app.blade.php",
     "./resources/css/app.css",
     "./resources/js/app.js",
     "./resources/sass/app.scss",
     "./resources/js/components/Nav.vue",
-     "./resources/js/components/ProfilDD.vue"
+    "./resources/js/components/Header.vue",
   ],
   presets: [],
   darkMode: 'media', // or 'class'
@@ -957,5 +960,6 @@ module.exports = {
     'active',
     'disabled',
   ],
-  plugins: [],
+  plugins: [
+  ],
 }

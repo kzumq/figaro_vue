@@ -1,6 +1,8 @@
 <template>
 <div class="dropdown">
-    <button >Menü</button>
+    <button >
+        <img class="profil-img rounded-lg" src="../../../public/images/person.png" style="width:2rem; height: 2rem ">
+    </button>
     <nav tabindex="0">
         <ul>
             <li>
@@ -25,25 +27,7 @@
 
 <style lang="scss" >
 
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border: 0;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-html {
-  font-size: 20px;
-  background: #E9D68A;
-}
-html, body {
-  height: 100%;
-}
-body {
-  padding: 15px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
+
 .dropdown {
   position: relative;
   button {
