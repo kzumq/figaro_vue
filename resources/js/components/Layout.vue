@@ -1,12 +1,10 @@
 <template>
 
-<Header />
+<Header @isActive="getVar"   />
 
+<p>Methods date call: "{{ showVal() }}"</p>
     <div class="app">
-
-
         <Nav />
-
         <slot />
     </div>
 </template>
@@ -14,10 +12,28 @@
 <script>
 
 import Nav from "./Nav";
-import Header from "./header.vue";
+import Header from "./Header";
 
 export default {
     components: { Nav, Header },
+
+    props: {
+        isActive: String
+    },
+
+    methods: {
+
+        getVar(val) {
+            
+        },
+
+        showVal(props) {
+            console.log(props.isActive)
+        }
+
+
+    }
+
 };
 
 </script>

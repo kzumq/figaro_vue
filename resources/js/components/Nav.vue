@@ -46,18 +46,28 @@
 </template>
 
 
-<script setup>
-import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+<script >
 
 import {ref} from 'vue'
 
+export default {
+    data() {
+        return {
+            is_expanded: ref(localStorage.getItem("is_expanded") === "true"),
+            visible: false
+        };
+    },
+    methods: {
+        ToggleMenu() {
+            this.is_expanded = !this.is_expanded;
+            localStorage.setItem("is_expanded", this.is_expanded);
+        }
+    },
+    mounted() {
+        console.log(`The initial count is ${this.is_expanded}.`);
+    }
 
-const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
-const ToggleMenu = () => {
-	is_expanded.value = !is_expanded.value
-	localStorage.setItem("is_expanded", is_expanded.value)
 }
-
 
 </script>
 

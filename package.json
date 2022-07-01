@@ -31,6 +31,7 @@
         "@inertiajs/inertia": "^0.11.0",
         "@inertiajs/inertia-vue3": "^0.6.0",
         "bootstrap-vue": "^2.22.0",
+        "mitt": "^3.0.0",
         "tw-elements": "^1.0.0-alpha12",
         "vue": "^3.2.36",
         "vue-router": "^4.0.16"

@@ -4,9 +4,8 @@
 
 <div class=" header border-2">
         <div class="menu-toggle-wrap">
-			<button class="menu-toggle" @click="ToggleMenu">
+			<button class="menu-toggle" v-on:click="toggle">
 				<span class="material-symbols-outlined menu-icon">menu</span>
-                
 			</button>
 		</div>
 
@@ -16,7 +15,17 @@
 
 <script>
 export default {
-
+    data()  {
+        return {
+            isActive: false
+        }
+    },
+    methods: {
+        toggle() {
+            this.isActive = !this.isActive
+            this.$emit('isActive', this.isActive)
+        }
+    }
 }
 </script>
 
