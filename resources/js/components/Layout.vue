@@ -1,8 +1,6 @@
 <template>
 
 <Header @isActive="getVar"   />
-
-<p>Methods date call: "{{ showVal() }}"</p>
     <div class="app">
         <Nav />
         <slot />
@@ -17,22 +15,23 @@ import Header from "./Header";
 export default {
     components: { Nav, Header },
 
-    props: {
-        isActive: String
+    data() {
+      return {
+        isVisible: ''
+      }
     },
 
     methods: {
 
         getVar(val) {
-            
+            this.isVisible = val
+
+            console.log(this.isVisible);
         },
 
-        showVal(props) {
-            console.log(props.isActive)
-        }
 
+    },
 
-    }
 
 };
 
