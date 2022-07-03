@@ -2,7 +2,7 @@
 
 <Header @isActive="getVar"   />
     <div class="app">
-        <Nav />
+        <Nav :is_expanded="is_expanded" />
         <slot />
     </div>
 </template>
@@ -13,23 +13,21 @@ import Nav from "./Nav";
 import Header from "./Header";
 
 export default {
+    name: "Layout",
+
     components: { Nav, Header },
 
     data() {
       return {
-        isVisible: ''
+        is_expanded: ""
       }
     },
 
     methods: {
 
         getVar(val) {
-            this.isVisible = val
-
-            console.log(this.isVisible);
+            this.is_expanded = val
         },
-
-
     },
 
 
@@ -42,7 +40,7 @@ export default {
 :root {
     --primary: #4ade80;
     --grey: #64748b;
-    --dark: #1e203b;
+    --dark: #202020;
     --light: #f1f5f9;
     --sidebar-width: 300px;
 
@@ -70,6 +68,7 @@ export default {
 
     .app {
         display: flex;
+        position: fixed;
 
         main {
             flex: 1 1 0;

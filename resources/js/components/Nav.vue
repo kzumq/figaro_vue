@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
-		<h3>Menu</h3>
+		<h3>Sidenavbar</h3>
 		<div class="menu">
 			<router-link to="/" class="button">
 				<span class="material-symbols-rounded">home</span>
@@ -33,12 +33,7 @@
 			</router-link>
 		</div>
 
-        <div class="menu-toggle-wrap">
-			<button class="menu-toggle" @click="ToggleMenu">
-				<span class="material-symbols-outlined menu-icon">menu</span>
-                <span class="material-symbols-outlined arrow-back">arrow_back</span>
-			</button>
-		</div>
+
 
 
 
@@ -48,24 +43,20 @@
 
 <script >
 
+
 import {ref} from 'vue'
 
 export default {
+    name: 'Sidenavbar',
+
     data() {
         return {
-            is_expanded: ref(localStorage.getItem("is_expanded") === "true"),
-            visible: false
+
         };
     },
-    methods: {
-        ToggleMenu() {
-            this.is_expanded = !this.is_expanded;
-            localStorage.setItem("is_expanded", this.is_expanded);
-        }
+    props: {
+        is_expanded: String
     },
-    mounted() {
-        console.log(`The initial count is ${this.is_expanded}.`);
-    }
 
 }
 
@@ -91,32 +82,6 @@ aside {
 
 	.flex {
 		flex: 1 1 0%;
-	}
-
-	.menu-toggle-wrap {
-		display: flex;
-		justify-content: flex-end;
-		margin-bottom: 1rem;
-		position: relative;
-		top: 0;
-		transition: 0.2s ease-in-out;
-        .arrow-back { display: none; }
-        .settings-icon {display: none;}
-		.menu-toggle {
-			transition: 0.2s ease-in-out;
-			.material-symbols-rounded, .material-symbols-outlined {
-				font-size: 2rem;
-				color: var(--light);
-				transition: 0.2s ease-out;
-			}
-
-			&:hover {
-				.material-symbols-rounded, .material-symbols-outlined {
-					color: var(--primary);
-
-				}
-			}
-		}
 	}
 	h3, .button .text {
 		opacity: 0;
