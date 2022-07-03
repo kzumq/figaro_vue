@@ -5,18 +5,17 @@
 
 <div class=" header container">
 
-    <ul class="headernav">
-        <li class="menu-toggle-wrap ">
+    <nav>
+            <div class="menu-toggle-wrap">
+                <button class="menu-toggle" @click="toggle">
+				    <span class="material-symbols-outlined menu-icon">menu</span>
+			    </button>
+            </div>
 
-			<button class="menu-toggle" @click="toggle">
-				<span class="material-symbols-outlined menu-icon">menu</span>
-			</button>
 
-        </li>
-        <li class="profil">
             <ProfilDropDown />
-        </li>
-    </ul>
+
+    </nav>
 </div>
 
 </template>
@@ -72,18 +71,31 @@ export default {
     min-width: 100%;
 }
 
-li {
-    list-style-type: none;
-}
+nav {
+  width: 100vw;
+  display: flex;
 
-li:first-child{
-    float: left;
 
 }
-
-li:last-child {
-    float: right;
-
+nav .menu-item {
+    color: #FFF;
+    margin: 8px;
+    padding: 8px;
+    position: relative;
+    display: flex;
+    transition: 0.4s;
+}
+nav .menu-item.active,
+nav .menu-item:hover {
+  background-color: #0d0d0e;
+  border-bottom-color: #bb3030;
+}
+nav .menu-item a {
+  color: inherit;
+  text-decoration: none;
 }
 
+nav .menu-btn {
+    border
+}
 </style>
