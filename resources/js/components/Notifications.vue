@@ -2,9 +2,11 @@
   <div>
     <div class="relative">
       <!-- Dropdown toggle button -->
-      <button @click="isOpen" class="flex menu-toggle" style="margin-right: 1rem;" >
-        <img src="../../../public/assets/img/person.png" class="rounded-full profil-btn"  alt="">
-      </button>
+
+        <button @click="isOpen" class="flex menu-toggle" style="margin-right: 1rem;"  >
+            <span class="material-symbols-outlined" >notifications</span>
+        </button>
+
 
       <!-- Dropdown menu -->
       <div v-show="show" class="absolute right-0  bg-white rounded-md shadow-xl  w-44" style="margin: 0.5rem 1rem 0 0;">
@@ -40,11 +42,24 @@ import { ref } from 'vue';
 </script>
 
 <style lang="scss">
-    .profil-btn {
-        width: 45px;
-        height: 45px;
-    }
 
+    .menu-toggle {
+            .material-symbols-outlined {
+                font-size: 2rem;
+                color: var(--light);
+                margin: 8px;
+                padding: 8px;
 
+            }
+            &:hover {
+                .material-symbols-outlined {
+                    color: var(--primary);
+                    background-color: #2e2e2e;
+                    border: 1px;
+                    border-radius: 50%;
+
+                }
+            }
+        }
 
 </style>

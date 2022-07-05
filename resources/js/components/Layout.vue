@@ -43,6 +43,7 @@ export default {
     --dark: #202020;
     --light: #f1f5f9;
     --sidebar-width: 300px;
+    --header-button-size: 2rem;
 
 
     *{
