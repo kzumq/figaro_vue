@@ -3,25 +3,38 @@
     <div class="relative">
       <!-- Dropdown toggle button -->
       <button @click="isOpen" class="flex menu-toggle" style="margin-right: 1rem;" >
-        <img src="../../../public/assets/img/person.png" class="rounded-full profil-btn"  alt="">
+        <img src="../../../public/assets/img/person.png" class="rounded-full h-8 w-8"  alt="">
       </button>
 
       <!-- Dropdown menu -->
-      <div v-show="show" class="absolute right-0  bg-white rounded-md shadow-xl  w-44" style="margin: 0.5rem 1rem 0 0;">
-        <router-link to="/" class="block px-4 py-2 text-sm text-black  hover:bg-indigo-400 hover:text-indigo-100">
+      <div v-show="show" class="absolute right-0 profil-dropdown drop-shadow-lg rounded w-44" style="margin: 1rem 1rem 1rem 0;">
+        <router-link to="/" class="flex  items-center px-4 py-2 text-sm text-black  ">
+            <img src="../../../public/assets/img/person.png" class="rounded-full h-10 w-10 justify-start" style="margin: 1rem"  alt="">
+            <h2 class="items-center justify-end">Figaro</h2>
+
+            </router-link>
+        <hr>
+        <router-link
+          to="/"
+          class="flex px-4 py-2 text-sm items-center profil-dropdown-items" style="margin-top: 1rem "
+        >
+        <span class="material-symbols-outlined items-center justify-start">person</span>
+        <h4 class="items-center justify-end " style="margin-left: 1rem;">  Mein Profil </h4>
 
         </router-link>
         <router-link
           to="/"
-          class="block px-4 py-2 text-sm text-indigo-100  hover:bg-indigo-400 hover:text-indigo-100"
+          class="flex px-4 py-2 text-sm items-center profil-dropdown-items"
         >
-          Dropdown List 2
+        <span class="material-symbols-outlined items-center justify-start">group</span>
+        <h4 class="items-center justify-end profil-dropdown-icons" style="margin-left: 1rem;">  Mein Team </h4>
         </router-link>
         <router-link
           to="/"
-          class="block px-4 py-2 text-sm text-indigo-100  hover:bg-indigo-400 hover:text-indigo-100"
+          class="flex px-4 py-2 text-sm items-center profil-dropdown-items"
         >
-          Dropdown List 3
+        <span class="material-symbols-outlined items-center justify-start">logout</span>
+        <h4 class="items-center justify-end profil-dropdown-icons" style="margin:0 0 0 1rem">  logout </h4>
         </router-link>
       </div>
     </div>
@@ -40,11 +53,32 @@ import { ref } from 'vue';
 </script>
 
 <style lang="scss">
-    .profil-btn {
-        width: 45px;
-        height: 45px;
+
+.profil-dropdown-icons {
+
+}
+
+hr {
+
+    width: 100%;
+    border-color: rgb(187, 187, 187);
+
+}
+
+.profil-dropdown {
+    background-color: white;
+    width: 16rem;
+    height: 16rem;
+
+    .profil-dropdown-items {
+        padding: 1rem;
+        color: black;
+
+
+        &:hover {
+        color: var(--primary);
+        }
     }
-
-
+}
 
 </style>
