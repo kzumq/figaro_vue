@@ -15,8 +15,7 @@
     </div>
     <div class="items-center">
         <ProfilDropDown />
-
-</div>
+    </div>
 
 </nav>
 
@@ -54,16 +53,11 @@ export default {
         &:hover {
 			.material-symbols-outlined {
 				color: var(--primary);
-
-
-
 			}
         }
 	}
 
 }
-
-
 .header {
     background-color: var(--dark);
     min-height: 5vh;

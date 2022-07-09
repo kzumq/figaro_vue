@@ -73,8 +73,6 @@ hr {
     .profil-dropdown-items {
         padding: 1rem;
         color: black;
-
-
         &:hover {
         color: var(--primary);
         }
