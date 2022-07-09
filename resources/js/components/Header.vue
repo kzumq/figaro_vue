@@ -2,23 +2,23 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+<headerbar>
+    <nav class="flex items-center justify-between flex-wrap header">
+        <div class="menu-toggle-wrap items-center" style="margin: 1rem 0 0 1rem ;">
+            <button class="menu-toggle" @click="toggle">
+                <span class="material-symbols-outlined menu-icon">menu</span>
+            </button>
+        </div>
 
-<nav class="flex items-center justify-between flex-wrap header">
-    <div class="menu-toggle-wrap items-center" style="margin: 1rem 0 0 1rem ;">
-        <button class="menu-toggle" @click="toggle">
-		    <span class="material-symbols-outlined menu-icon">menu</span>
-		</button>
-    </div>
+        <div class="items-center">
+            <Notifications  />
+        </div>
+        <div class="items-center">
+            <ProfilDropDown />
+        </div>
 
-    <div class="items-center">
-        <Notifications  />
-    </div>
-    <div class="items-center">
-        <ProfilDropDown />
-    </div>
-
-</nav>
-
+    </nav>
+</headerbar>
 
 </template>
 
@@ -43,6 +43,8 @@ export default {
 </script>
 
 <style lang="scss">
+
+
 
 .menu-toggle-wrap {
     .menu-toggle {

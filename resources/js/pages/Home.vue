@@ -2,8 +2,8 @@
 <template>
 
     <Layout>
-        <main>
 
+        <main class="row-full">
             <div class="flex">
                 <div class="w-1/2 px-2 md:max-w-xxl rounded-lg bg-white shadow-lg dashboard-card ">
                     <div class="p-6 justify-start">

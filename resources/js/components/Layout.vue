@@ -1,8 +1,10 @@
 <template>
 
-<Header @isActive="getVar"   />
-    <div class="app">
+    <Header @isActive="getVar" />
+    <div class="app" style="width:100vw;">
+
         <Nav :is_expanded="is_expanded" />
+
         <slot />
     </div>
 </template>
@@ -24,7 +26,6 @@ export default {
     },
 
     methods: {
-
         getVar(val) {
             this.is_expanded = val
         },
@@ -47,13 +48,12 @@ export default {
 
 
     *{
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
         font-family: 'Fira sans', sans-serif;
     }
 
     body {
+        position: relative;
 
         background: var(--light);
 
@@ -70,12 +70,11 @@ export default {
     .app {
         display: flex;
         position: fixed;
-
         main {
             flex: 1 1 0;
             padding: 2rem;
 
-            @media (max-width: 768px) {
+            @media (max-width: 780px) {
                 padding-left: 6rem;
 
             }

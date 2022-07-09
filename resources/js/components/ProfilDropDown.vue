@@ -54,9 +54,7 @@ import { ref } from 'vue';
 
 <style lang="scss">
 
-.profil-dropdown-icons {
 
-}
 
 hr {
 
