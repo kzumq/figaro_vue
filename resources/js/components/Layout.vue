@@ -1,5 +1,4 @@
 <template>
-
     <Header @isActive="getVar" />
     <div class="app" style="width:100vw;">
 
@@ -53,7 +52,6 @@ export default {
     }
 
     body {
-        position: relative;
 
         background: var(--light);
 
@@ -68,8 +66,8 @@ export default {
     }
 
     .app {
-        display: flex;
-        position: fixed;
+        display: inline-flex;
+        position: absolute;
         main {
             flex: 1 1 0;
             padding: 2rem;

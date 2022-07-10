@@ -19742,10 +19742,10 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_3 = {
-  "class": "flex items-center justify-between flex-wrap header"
+  "class": "flex flex-rowitems-center header"
 };
 var _hoisted_4 = {
-  "class": "menu-toggle-wrap items-center",
+  "class": "menu-toggle-wrap item-center basis-11/12",
   style: {
     "margin": "1rem 0 0 1rem"
   }
@@ -19759,10 +19759,13 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_6 = [_hoisted_5];
 var _hoisted_7 = {
-  "class": "items-center"
+  "class": "grid grid-cols-2 gap-4 items-center place-items-end"
 };
 var _hoisted_8 = {
-  "class": "items-center"
+  "class": ""
+};
+var _hoisted_9 = {
+  "class": ""
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Notifications = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Notifications");
@@ -19778,7 +19781,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         onClick: _cache[0] || (_cache[0] = function () {
           return $options.toggle && $options.toggle.apply($options, arguments);
         })
-      }, _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Notifications)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ProfilDropDown)])])];
+      }, _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Notifications)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ProfilDropDown)])])])];
     }),
     _: 1
     /* STABLE */
@@ -20056,9 +20059,9 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_3 = [_hoisted_2];
 var _hoisted_4 = {
-  "class": "absolute right-0 notification drop-shadow-lg rounded",
+  "class": "z-[1000] absolute right-0 notification drop-shadow-lg",
   style: {
-    "margin": "1.5rem 1rem 0 0"
+    "margin": "0.5rem 1rem 0 0"
   }
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -20106,17 +20109,17 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_3 = [_hoisted_2];
 var _hoisted_4 = {
-  "class": "absolute right-0 profil-dropdown drop-shadow-lg rounded w-44",
+  "class": "absolute z-[1000] right-0 profil-dropdown drop-shadow-lg w-44",
   style: {
-    "margin": "1rem 1rem 1rem 0"
+    "margin": "0.5rem 1rem 1rem 0"
   }
 };
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   src: _public_assets_img_person_png__WEBPACK_IMPORTED_MODULE_1__["default"],
-  "class": "rounded-full h-10 w-10 justify-start",
+  "class": "rounded-full h-10 w-10",
   style: {
-    "margin": "1rem"
+    "margin": "1rem 1rem 1rem 0"
   },
   alt: ""
 }, null, -1
@@ -20286,8 +20289,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", {
-  "class": "row-full"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row-full justify-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": ""
+}, " DASHBOARD "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "w-1/2 px-2 md:max-w-xxl rounded-lg bg-white shadow-lg dashboard-card"
@@ -20555,7 +20560,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --primary: #4ade80;\n  --grey: #64748b;\n  --dark: #202020;\n  --light: #f1f5f9;\n  --sidebar-width: 300px;\n  --header-button-size: 2rem;\n}\n:root * {\n  box-sizing: border-box;\n  font-family: \"Fira sans\", sans-serif;\n}\n:root body {\n  position: relative;\n  background: var(--light);\n}\n:root button {\n  cursor: pointer;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  border: none;\n  outline: none;\n  background: none;\n}\n:root .app {\n  display: flex;\n  position: fixed;\n}\n:root .app main {\n  flex: 1 1 0;\n  padding: 2rem;\n}\n@media (max-width: 780px) {\n:root .app main {\n    padding-left: 6rem;\n}\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --primary: #4ade80;\n  --grey: #64748b;\n  --dark: #202020;\n  --light: #f1f5f9;\n  --sidebar-width: 300px;\n  --header-button-size: 2rem;\n}\n:root * {\n  box-sizing: border-box;\n  font-family: \"Fira sans\", sans-serif;\n}\n:root body {\n  background: var(--light);\n}\n:root button {\n  cursor: pointer;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  border: none;\n  outline: none;\n  background: none;\n}\n:root .app {\n  display: inline-flex;\n  position: absolute;\n}\n:root .app main {\n  flex: 1 1 0;\n  padding: 2rem;\n}\n@media (max-width: 780px) {\n:root .app main {\n    padding-left: 6rem;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20627,7 +20632,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "hr {\n  width: 100%;\n  border-color: rgb(187, 187, 187);\n}\n.profil-dropdown {\n  background-color: white;\n  width: 16rem;\n  height: 16rem;\n}\n.profil-dropdown .profil-dropdown-items {\n  padding: 1rem;\n  color: black;\n}\n.profil-dropdown .profil-dropdown-items:hover {\n  color: var(--primary);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "hr {\n  width: 100%;\n  border-color: rgb(187, 187, 187);\n}\n.profil-dropdown {\n  background-color: white;\n  width: 16rem;\n  height: 18rem;\n}\n.profil-dropdown .profil-dropdown-items {\n  padding: 1rem;\n  color: black;\n}\n.profil-dropdown .profil-dropdown-items:hover {\n  color: var(--primary);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

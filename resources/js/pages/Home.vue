@@ -3,7 +3,8 @@
 
     <Layout>
 
-        <main class="row-full">
+        <main class="row-full justify-center">
+            <h1 class=""> DASHBOARD </h1>
             <div class="flex">
                 <div class="w-1/2 px-2 md:max-w-xxl rounded-lg bg-white shadow-lg dashboard-card ">
                     <div class="p-6 justify-start">
