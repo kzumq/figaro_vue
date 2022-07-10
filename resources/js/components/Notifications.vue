@@ -9,7 +9,7 @@
 
 
       <!-- Dropdown menu -->
-      <div v-show="show" class="z-[1000] absolute right-0 notification drop-shadow-lg " style="margin: 0.5rem 1rem 0 0;">
+      <div v-show="show" class="z-[1000] absolute right-0 notification drop-shadow-lg " style="margin: 1rem 1rem 0 0;">
 
       </div>
     </div>
@@ -33,9 +33,6 @@ import { ref } from 'vue';
         background-color: white;
         width: 16rem;
         height: 16rem;
-
-
-
     }
 
     .menu-toggle-not {

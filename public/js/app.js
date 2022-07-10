@@ -19742,10 +19742,10 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_3 = {
-  "class": "flex flex-rowitems-center header"
+  "class": "flex flex-row items-center header"
 };
 var _hoisted_4 = {
-  "class": "menu-toggle-wrap item-center basis-11/12",
+  "class": "menu-toggle-wrap item-center basis-full",
   style: {
     "margin": "1rem 0 0 1rem"
   }
@@ -20061,7 +20061,7 @@ var _hoisted_3 = [_hoisted_2];
 var _hoisted_4 = {
   "class": "z-[1000] absolute right-0 notification drop-shadow-lg",
   style: {
-    "margin": "0.5rem 1rem 0 0"
+    "margin": "1rem 1rem 0 0"
   }
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -20536,7 +20536,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".menu-toggle-wrap .menu-toggle .material-symbols-outlined {\n  font-size: 2rem;\n  color: var(--light);\n}\n.menu-toggle-wrap .menu-toggle:hover .material-symbols-outlined {\n  color: var(--primary);\n}\n.header {\n  background-color: var(--dark);\n  min-height: 5vh;\n  min-width: 100%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".menu-toggle-wrap .menu-toggle .material-symbols-outlined {\n  font-size: 2rem;\n  color: var(--light);\n}\n.menu-toggle-wrap .menu-toggle:hover .material-symbols-outlined {\n  color: var(--primary);\n}\n.header {\n  background-color: var(--dark);\n  min-height: 5vh;\n  min-width: 100vw;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
